@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #slider{
+            width: 600px;
+            cursor: pointer;
+            background: transparent;
+            appearance: none; 
+            
+            
+        }
+        
+        #slider::-webkit-slider-runnable-track{
+            background-color: black;
+            border: 2px solid white;
+            border-radius: 10px;
+        }
+
+
+
+        #slider::-webkit-slider-thumb{
+            appearance: none;
+            width: 20px; /* Set the width of the thumb */
+            height: 20px; /* Set the height of the thumb */
+            background-color: gold; /* Change the color of the thumb */
+            border: 2px solid white; /* Add a border to the thumb */
+            border-radius: 50%; /* Make the thumb circular */
+        }
+
+        
+    
+
+        .display{
+            background-color: rgb(255, 8, 202);
+            height: 50px;
+            width: 100px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            font-size: xx-large;
+
+        }
+
+        .wrapper{
+            position: relative;
+            top: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .display_hide{
+            display: none;
+        }
+        
+        </style>
+</head>
+<body>
+    <div class="wrapper">
+        <input type="range" value="1" min="1" max="10" id="slider" >
+        <div class="display_hide">
+            <div class="display"></div>
+        </div>
+    </div>
+    
+    
+    <script src="./index.js"></script>
+</body>
+</html>
